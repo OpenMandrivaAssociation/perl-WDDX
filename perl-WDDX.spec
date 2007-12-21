@@ -11,6 +11,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/%{real_name}-%{ver
 BuildRequires:	perl-devel
 BuildRequires:  perl-XML-Parser
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module provides a perl interface to WDDX. The latest version
