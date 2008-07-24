@@ -3,7 +3,7 @@
 Summary:	WDDX.pm - Module for reading and writing WDDX packets
 Name:		perl-%{real_name}
 Version:	1.02
-Release:	%mkrel 3
+Release:	%mkrel 5
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
