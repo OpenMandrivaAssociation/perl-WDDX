@@ -1,17 +1,19 @@
-%define real_name WDDX
+%define upstream_name    WDDX
+%define upstream_version 1.02
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
 
 Summary:	WDDX.pm - Module for reading and writing WDDX packets
-Name:		perl-%{real_name}
-Version:	1.02
-Release:	%mkrel 6
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl-XML-Parser
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides a perl interface to WDDX. The latest version
@@ -20,7 +22,7 @@ http://www.scripted.com/wddx/. For more information about WDDX
 please visit http://www.wddx.org/
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,4 +45,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/WDDX/*
 %{perl_vendorlib}/WDDX.pm
 %{_mandir}/*/*
-
