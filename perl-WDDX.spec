@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	4
 
 Summary:	WDDX.pm - Module for reading and writing WDDX packets
 License:	GPL+ or Artistic
