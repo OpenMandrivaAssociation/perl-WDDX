@@ -2,14 +2,14 @@
 %define upstream_version 1.02
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	WDDX.pm - Module for reading and writing WDDX packets
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/%{upstream_name}-%{upstream_version}.tar.bz2
+URL:		https://metacpan.org/dist/WDDX
+Source0:	https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/WDDX-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
