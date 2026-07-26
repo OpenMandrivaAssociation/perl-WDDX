@@ -1,15 +1,13 @@
 %define upstream_name    WDDX
-%define upstream_version 1.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	1.02
+Release:	6
 
 Summary:	WDDX.pm - Module for reading and writing WDDX packets
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/WDDX
-Source0:	https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/WDDX-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/WDDX-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ http://www.scripted.com/wddx/. For more information about WDDX
 please visit http://www.wddx.org/
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -46,9 +44,7 @@ make test
 %changelog
 * Tue Jul 28 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.20.0-1mdv2010.0
 + Revision: 401918
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.02-6mdv2009.0
+- rebuild using %1.02 Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.02-6mdv2009.0
 + Revision: 258783
 - rebuild
 
